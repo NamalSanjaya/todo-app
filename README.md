@@ -38,11 +38,12 @@ Change following parameters in aws provider block.
 * shared_config_files : ["C:/Users/{username}/.aws/config"]
 * shared_credentials_files : ["C:/Users/{username}/.aws/credentials"]
 
-Change the `username` with your logged in username
+Change the `username` with your logged in username.  
 
 ### 4. Execute Terraform Scripts
-a. Go to `scripts/terraform/` in repository.  
-b. Open up the terminal and apply following commands.  
+a. Open up the terminal in the root of the repository.  
+b. Go to `scripts/terraform/` directory.  
+c. Apply following commands.    
  This will Initializing the backend.   
 ```
 terraform init
@@ -55,7 +56,36 @@ terraform apply
 Now you have successfully deployed the todo application.  
 
 ## Usage  
-hhhh
+### 1. Get the public Ip  
+a. Open up the terminal in the root of the repository and go to `scripts/terraform/` directory.  
+b. Apply the following command and get the value of `public_ip` field.  
+```
+terraform output -json
+```
+### 2. Create a user account  
+Open the browser the go to following url.  
+```
+http://{public_ip}:3000/signup
+```
+Replace the `public_ip` with public ip you obtained from step 1 under Usage section.
+
+### 3. Login to todo app.
+Go to following url to login to the todo app
+```
+http://{public_ip}:3000/login
+```
+
+### 4. Create your first task
+a. Click the plus (+) sign to create new task.  
+b. Give a title and provide a description (optional) to click `Create` button.
+
+Now you can view your created task.
+
+
+
+
+
+
 
 
 
