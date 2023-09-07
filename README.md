@@ -40,6 +40,9 @@ Change following parameters in aws provider block.
 
 Change the `username` with your logged in username.  
 
+![change_username](https://github.com/NamalSanjaya/todo-app/assets/68647363/4159ab1f-b97c-48db-92b2-ccb2f9ba5708)
+
+
 ### 4. Execute Terraform Scripts
 a. Open up the terminal in the root of the repository.  
 b. Go to `scripts/terraform/` directory.  
@@ -58,10 +61,14 @@ Now you have successfully deployed the todo application.
 ## Usage  
 ### 1. Get the public Ip  
 a. Open up the terminal in the root of the repository and go to `scripts/terraform/` directory.  
-b. Apply the following command and get the value of `public_ip` field.  
+b. Apply the following command.    
 ```
 terraform output -json
 ```
+c. Get the value of `public_ip` field.  
+![tf_output2](https://github.com/NamalSanjaya/todo-app/assets/68647363/e07b2040-4f9d-47e6-842a-52c8e4f38636)  
+
+
 ### 2. Create a user account  
 Open the browser the go to following url.  
 ```
@@ -79,7 +86,9 @@ http://{public_ip}:3000/login
 a. Click the plus (+) sign to create new task.  
 b. Give a title and provide a description (optional) to click `Create` button.
 
-Now you can view your created task.
+Now you can view your created task. Following image show the todo-app demo.
+
+![Screenshot (335)](https://github.com/NamalSanjaya/todo-app/assets/68647363/0f762337-3b5c-41c6-b9eb-71a6168b76dc)
 
 
 
