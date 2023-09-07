@@ -89,21 +89,3 @@ b. Give a title and provide a description (optional) to click `Create` button.
 Now you can view your created task. Following image show the todo-app demo.
 
 ![Screenshot (335)](https://github.com/NamalSanjaya/todo-app/assets/68647363/0f762337-3b5c-41c6-b9eb-71a6168b76dc)
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-

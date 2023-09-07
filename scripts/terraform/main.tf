@@ -133,7 +133,7 @@ output "public_ip" {
   value = aws_instance.ns_todoapp_instance.public_ip
 }
 
-output "private_key" {
-  value = tls_private_key.ns_todoapp_secret_private_key.private_key_pem
-  sensitive = true
-}
+# output "private_key" {
+#   value = tls_private_key.ns_todoapp_secret_private_key.private_key_pem
+#   sensitive = true
+# }

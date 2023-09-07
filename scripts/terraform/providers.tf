@@ -8,7 +8,7 @@ terraform {
 
 provider "aws" {
   region                  = "ap-southeast-1"
-  shared_config_files      = ["C:/Users/Namal_106220/.aws/config"]
-  shared_credentials_files = ["C:/Users/Namal_106220/.aws/credentials"]
-  profile                 = "dev-camunda"
+  shared_config_files      = ["C:/Users/{username}/.aws/config"]
+  shared_credentials_files = ["C:/Users/{username}/.aws/credentials"]
+  profile                 = "todoapp-user"
 }
