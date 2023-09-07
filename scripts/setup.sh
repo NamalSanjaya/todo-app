@@ -26,6 +26,8 @@ nohup npm run start:dev > ~/logs/nest_server.log &
 echo "nest server started....8000"
 cd ~/todo-app/todo-frontend
 npm install
-nohup env REACT_APP_HOST_DOMAIN=13.214.196.121 npm start > ~/logs/react_app.log &
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+PUBLIC_IP=`curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/public-ipv4`
+nohup env REACT_APP_HOST_DOMAIN=$PUBLIC_IP npm start > ~/logs/react_app.log &
 echo "react server started....3000"
 echo "complete system deployed successfully."
